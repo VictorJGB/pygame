@@ -50,9 +50,10 @@ while True:
 
     #Desenhando os objetos
     ret_vermelho = pygame.draw.rect(tela, (255,0,0), (x,y,40,50))
-    ret_azul = pygame.draw.rect(tela ,(0,0,255), (200,300,40,50))
+    ret_azul = pygame.draw.rect(tela ,(0,0,255), (x_azul,y_azul,40,50))
 
     if ret_vermelho.colliderect(ret_azul):
-        print('COLISÃO')
+        x_azul = randint(40, 600)
+        y_azul = randint(50, 430)
 
     pygame.display.update()
